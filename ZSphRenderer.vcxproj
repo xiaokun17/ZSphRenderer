@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
+    <LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">10.0</WindowsTargetPlatformVersion>
+    <TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ZSphRenderer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxTBB\libs;..\..\..\addons\ofxTBB\libs\include;..\..\..\addons\ofxTBB\libs\include\oneapi;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail;..\..\..\addons\ofxTBB\libs\lib;extern</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);assimp32.lib;tbb.lib;tbb12.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxTBB\libs\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxTBB\libs;..\..\..\addons\ofxTBB\libs\include;..\..\..\addons\ofxTBB\libs\include\oneapi;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail;..\..\..\addons\ofxTBB\libs\lib;extern</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);assimp64.lib;tbb.lib;tbb12.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxTBB\libs\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxTBB\libs;..\..\..\addons\ofxTBB\libs\include;..\..\..\addons\ofxTBB\libs\include\oneapi;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail;..\..\..\addons\ofxTBB\libs\lib;extern</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);assimp32.lib;tbb.lib;tbb12.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxTBB\libs\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\license;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxTBB\libs;..\..\..\addons\ofxTBB\libs\include;..\..\..\addons\ofxTBB\libs\include\oneapi;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb;..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail;..\..\..\addons\ofxTBB\libs\lib;extern</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);assimp64.lib;tbb.lib;tbb12.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64;..\..\..\addons\ofxTBB\libs\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+    <PreBuildEvent>
+      <Message>xcopy /y $(ProjectDir)1.txt  $(ProjectDir)$(OutDir)</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\CNCompactNSearch.cpp" />
+    <ClCompile Include="src\Cubemap.cpp" />
+    <ClCompile Include="src\LiquidRenderer.cpp" />
+    <ClCompile Include="src\MeshRenderer.cpp" />
+    <ClCompile Include="src\SkyRenderer.cpp" />
+    <ClCompile Include="src\SolidRenderer.cpp" />
+    <ClCompile Include="src\SphRenderer.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxColorPicker.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxInputField.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\DepthFilter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\CNCompactNSearch.h" />
+    <ClInclude Include="src\CNConfig.h" />
+    <ClInclude Include="src\CNDataStructure.h" />
+    <ClInclude Include="src\CNPointSet.h" />
+    <ClInclude Include="src\Cubemap.h" />
+    <ClInclude Include="src\LiquidRenderer.h" />
+    <ClInclude Include="src\MeshRenderer.h" />
+    <ClInclude Include="src\SkyRenderer.h" />
+    <ClInclude Include="src\SolidRenderer.h" />
+    <ClInclude Include="src\SphRenderer.h" />
+    <ClInclude Include="src\SVD.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ai_assert.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\anim.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\camera.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cexport.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cfileio.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cimport.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\color4.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pstdint.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\config.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultIOStream.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Defines.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\defs.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Exporter.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Importer.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\importerdesc.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOStream.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\light.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Logger.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\LogStream.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\material.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix3x3.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix4x4.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\mesh.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\metadata.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\postprocess.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\quaternion.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\scene.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\SceneCombiner.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\texture.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\types.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h" />
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxColorPicker.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiUtils.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxInputField.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range2d.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range3d.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_rangeNd.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\cache_aligned_allocator.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\combinable.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_hash_map.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_lru_cache.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_map.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_priority_queue.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_queue.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_set.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_unordered_map.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_unordered_set.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_vector.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_aggregator.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_aligned_space.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_allocator_traits.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_assert.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_queue_base.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_skip_list.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_unordered_base.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_config.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_containers_helpers.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_exception.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_body_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_cache_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_indexer_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_item_buffer_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_join_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_nodes_deduction.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_node_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_node_set_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_tagged_buffer_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_trace_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_types_impl.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_hash_compare.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_machine.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_namespace_injection.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_node_handle.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_pipeline_filters.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_pipeline_filters_deduction.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_range_common.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_rtm_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_rtm_rw_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_segment_table.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_small_object_pool.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_string_resource.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_task.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_template_helpers.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_utils.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\enumerable_thread_specific.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\flow_graph.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\flow_graph_abstractions.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\global_control.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\info.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\memory_pool.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\null_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\null_rw_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_for.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_for_each.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_invoke.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_pipeline.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_reduce.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_scan.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_sort.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\partitioner.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\profiling.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\queuing_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\queuing_rw_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\scalable_allocator.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\spin_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\spin_rw_mutex.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_arena.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_group.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_scheduler_observer.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tbbmalloc_proxy.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tbb_allocator.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tick_count.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\version.h" />
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb.h" />
+    <ClInclude Include="src\DepthFilter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="src\data\shaders\blit.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\blit.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\composition-pass.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\composition-pass.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\depth-pass.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\depth-pass.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-bigaussian.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-bigaussian.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-curvature-flow.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-curvature-flow.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-gaussian.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-gaussian.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-narrow-range.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-narrow-range.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\mesh.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\mesh.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\particle.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\particle.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\sky.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\sky.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\solid.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\solid.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\thickness-pass.frag">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\thickness-pass.vert">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data\shaders</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data\shaders</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky2</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/sky/Sky3</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posx.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posy.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posz.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)data/Sky/sky4</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\data\Floor\blue_marble.png" />
+    <Image Include="src\data\Floor\white.jpg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="icon.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,39 @@
+C:\Users\dou\Desktop\SPlisHSPlasH>.\bin\StaticBoundaryDemo.exe --no-cache ../data/scenes/DoubleDamBreak.json
+Load scene file: C:/Users/dou/Desktop/SPlisHSPlasH/data/scenes/DoubleDamBreak.json
+OpenGL version 4.6
+Using GLEW 1.12.0
+Vendor: NVIDIA Corporation
+Renderer: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
+Version: 4.6.0 NVIDIA 497.06
+Loading C:/Users/dou/Desktop/SPlisHSPlasH/data/models/UnitBox.obj
+Number of triangles: 12
+Number of vertices: 8
+Surface sampling of C:/Users/dou/Desktop/SPlisHSPlasH/data/models/UnitBox.obj
+Initialize fluid particles
+Initialize boundary psi
+Number of fluid particles: 24548
+Number of boundary particles: 70480
+Initialize boundary psi
+Created dir: G:/Scratch/SimData/DoubleDamBreak
+Created dir: G:/Scratch/SimData/DoubleDamBreak/SolidFrame
+Created dir: G:/Scratch/SimData/DoubleDamBreak
+Created dir: G:/Scratch/SimData/DoubleDamBreak/FluidFrame
+Created dir: G:/Scratch/SimData/DoubleDamBreak
+Created dir: G:/Scratch/SimData/DoubleDamBreak/FluidFrame
+Created dir: G:/Scratch/SimData/DoubleDamBreak
+Created dir: G:/Scratch/SimData/DoubleDamBreak/FluidFrame
+Average time Poisson disk sampling: 777.332 ms
+Average time neighborhood_search: 5.04903 ms
+Average time computeDFSPHFactor: 1.82681 ms
+Average time divergenceSolve: 8.77988 ms
+Average time pressureSolve: 13.5405 ms
+Average time SimStep: 33.1965 ms
+---------------------------------------------------------------------------
+
+Time sum Poisson disk sampling: 777.332 ms
+Time sum neighborhood_search: 36474.2 ms
+Time sum computeDFSPHFactor: 13196.9 ms
+Time sum divergenceSolve: 63425.8 ms
+Time sum pressureSolve: 97816.5 ms
+Time sum SimStep: 239812 ms
+---------------------------------------------------------------------------

@@ -1,0 +1,23 @@
+
+boundary_min -1.55 0 -1.55
+boundary_max 1.55 5.0 1.55
+
+movable_min -1.55 0 -1.55
+movable_max 1.55 5.0 1.55
+
+num_fluid_particles 24548
+max_fluid_particles 24548
+fluid_particle_radius 0.025
+
+camera_position -2.0 1.2 0.75
+
+camera_focus 0.0 0.0 0.0
+
+light_position -5 5 -5
+
+num_solids 0
+solids_color 0.9 0.6 0.1
+
+solid_frames 200
+
+total_frames 200

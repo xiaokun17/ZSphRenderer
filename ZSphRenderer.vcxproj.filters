@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CNCompactNSearch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cubemap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LiquidRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeshRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkyRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SolidRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SphRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxColorPicker.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxInputField.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DepthFilter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader">
+      <UniqueIdentifier>{DE65D9F7-840A-CD0A-A555-EA3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\src">
+      <UniqueIdentifier>{B84008DC-4B5E-271B-05DA-D8C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs">
+      <UniqueIdentifier>{3D854F79-FA4A-75FA-FC0A-2B25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp">
+      <UniqueIdentifier>{FE8B5295-D3A7-B9CD-89C9-2613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include">
+      <UniqueIdentifier>{EDC34C4F-5D44-FB76-337E-EE48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp">
+      <UniqueIdentifier>{E66BABFA-76A1-EB8D-40FF-B940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler">
+      <UniqueIdentifier>{A0C31C2E-6C01-8850-3B72-C818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port">
+      <UniqueIdentifier>{BEEFB1FC-DD96-F59B-869C-D91A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI">
+      <UniqueIdentifier>{CA012BC2-060F-2F55-47FD-5ACF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB">
+      <UniqueIdentifier>{CF8C13B6-515F-40AF-5D95-6882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB\libs">
+      <UniqueIdentifier>{85BD2308-B6C4-510A-7442-4BBC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB\libs\include">
+      <UniqueIdentifier>{8006F927-9BD4-F4CF-FCC8-BE0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB\libs\include\oneapi">
+      <UniqueIdentifier>{BAD29D80-2D2A-E0B2-F577-68D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB\libs\include\oneapi\tbb">
+      <UniqueIdentifier>{E17E6FA0-1DBB-3B0A-764C-CD2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTBB\libs\include\oneapi\tbb\detail">
+      <UniqueIdentifier>{F83728AC-F364-056A-AC68-EF6F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{509441b2-0ab0-469a-81cf-894ff0a23eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\shaders">
+      <UniqueIdentifier>{d68da6de-348e-4d24-9cec-d0f1ffa09cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Sky">
+      <UniqueIdentifier>{c9782135-1336-4722-baaf-28089592d099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Sky\sky3">
+      <UniqueIdentifier>{320b347b-3978-4963-ba8a-2670ad1c7a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Sky\sky2">
+      <UniqueIdentifier>{dddce491-932a-427b-9fc7-9a1e8ba6e34a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Sky\sky4">
+      <UniqueIdentifier>{ab9ea82d-89a9-48c6-82f2-314f95fe8b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Floor">
+      <UniqueIdentifier>{dbbed3e5-d5fe-46ff-8c3a-5683fca9a822}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CNCompactNSearch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CNConfig.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CNDataStructure.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CNPointSet.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cubemap.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LiquidRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MeshRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkyRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SolidRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SphRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SVD.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ai_assert.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\anim.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\camera.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cexport.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cfileio.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cimport.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\color4.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\poppack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pstdint.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pushpack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\config.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultIOStream.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultIOSystem.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultLogger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Defines.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\defs.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Exporter.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Importer.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\importerdesc.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOStream.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOSystem.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\light.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Logger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\LogStream.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\material.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix3x3.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix4x4.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\mesh.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\metadata.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\NullLogger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\port\AndroidJNI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\postprocess.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ProgressHandler.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\quaternion.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\scene.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\SceneCombiner.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\texture.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\types.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxColorPicker.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiUtils.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxInputField.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range2d.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_range3d.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\blocked_rangeNd.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\cache_aligned_allocator.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\combinable.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_hash_map.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_lru_cache.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_map.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_priority_queue.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_queue.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_set.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_unordered_map.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_unordered_set.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\concurrent_vector.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_aggregator.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_aligned_space.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_allocator_traits.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_assert.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_queue_base.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_skip_list.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_concurrent_unordered_base.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_config.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_containers_helpers.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_exception.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_body_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_cache_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_indexer_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_item_buffer_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_join_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_nodes_deduction.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_node_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_node_set_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_tagged_buffer_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_trace_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_flow_graph_types_impl.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_hash_compare.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_machine.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_namespace_injection.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_node_handle.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_pipeline_filters.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_pipeline_filters_deduction.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_range_common.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_rtm_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_rtm_rw_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_segment_table.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_small_object_pool.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_string_resource.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_task.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_template_helpers.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\detail\_utils.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\enumerable_thread_specific.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\flow_graph.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\flow_graph_abstractions.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\global_control.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\info.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\memory_pool.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\null_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\null_rw_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_for.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_for_each.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_invoke.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_pipeline.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_reduce.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_scan.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\parallel_sort.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\partitioner.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\profiling.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\queuing_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\queuing_rw_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\scalable_allocator.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\spin_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\spin_rw_mutex.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_arena.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_group.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\task_scheduler_observer.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tbbmalloc_proxy.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tbb_allocator.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\tick_count.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb\version.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi\tbb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTBB\libs\include\oneapi\tbb.h">
+      <Filter>addons\ofxTBB\libs\include\oneapi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DepthFilter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="src\data\shaders\thickness-pass.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\thickness-pass.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\solid.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\solid.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\sky.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\sky.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\particle.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\particle.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\mesh.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\mesh.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-narrow-range.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-narrow-range.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-gaussian.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-gaussian.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-curvature-flow.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-curvature-flow.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-bigaussian.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\filter-bigaussian.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\depth-pass.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\depth-pass.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\composition-pass.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\composition-pass.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\blit.vert">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\shaders\blit.frag">
+      <Filter>data\shaders</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negx.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negx.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negz.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\negy.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posx.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posy.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\posz.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negy.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky3\negz.png">
+      <Filter>data\Sky\sky3</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posx.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posy.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky2\posz.png">
+      <Filter>data\Sky\sky2</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negx.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negy.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\negz.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posx.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posy.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="src\data\Sky\sky4\posz.png">
+      <Filter>data\Sky\sky4</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\data\Floor\blue_marble.png">
+      <Filter>data\Floor</Filter>
+    </Image>
+    <Image Include="src\data\Floor\white.jpg">
+      <Filter>data\Floor</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
